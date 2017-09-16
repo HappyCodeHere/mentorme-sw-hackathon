@@ -1,8 +1,10 @@
 {
   "name": "my-react-starter-pack",
   "version": "0.1.0",
+  "proxy": "http://localhost:3090",
   "private": true,
   "dependencies": {
+    "axios": "^0.16.2",
     "node-sass-chokidar": "0.0.3",
     "npm-run-all": "^4.1.1",
     "react": "^15.6.1",
@@ -21,6 +23,8 @@
     "eject": "react-scripts eject",
     "start-js": "react-scripts start",
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
-    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive"
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+    "prod": "node server/app.js",
+    "postinstall": "npm run build"
   }
 }
