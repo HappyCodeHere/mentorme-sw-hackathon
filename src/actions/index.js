@@ -1,4 +1,4 @@
-/*import * as types from './types';*/
+import * as types from './types';
 
 /*import axios from 'axios';*/
 
@@ -12,3 +12,9 @@
   	});
   };
 }*/
+
+export const loginUser = () => {
+  return {
+    type: types.USER_LOGIN,
+  }
+}
