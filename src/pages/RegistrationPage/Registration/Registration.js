@@ -33,6 +33,7 @@ class Registration extends Component {
   render() {
     return (
       <form className="registration">
+        <h3>Войти</h3>
         <div>
           <input type="text" value={this.state.name} onChange={this.handleElementsChange} name="name" placeholder="Имя" />
         </div>

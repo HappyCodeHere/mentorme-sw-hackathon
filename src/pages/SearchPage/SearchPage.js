@@ -11,7 +11,7 @@ import { Loader } from '../../components/common';
 
 
 
-import './SearchPage.scss';
+import './SearchPage.css';
 
 import axios from 'axios';
 
@@ -65,7 +65,7 @@ class SearchPage extends Component {
           <Search search={this.state.search} handleData={this.handleSearch} />
 
           {this.state.mentors.length === 0 ?
-          <p>Mentor not found:(</p> :
+          <p>Менторы не найдены:(</p> :
           <MentorCardList mentors={this.state.mentors} />
           }
         </div>

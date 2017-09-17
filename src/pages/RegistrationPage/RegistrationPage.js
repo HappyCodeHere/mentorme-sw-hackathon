@@ -47,31 +47,39 @@ class RegistrationPage extends Component {
         <section>
           <div className="row">
             <div className="col-md-5">
-              <img src="" alt="jkjkjk"/>
+              <img src="https://hrcdn.net/hackerrank/assets/home/hr-banner-new-ad413b961c8c9bb4c64fcd81367c9c8b.png" alt="jkjkjk"/>
             </div>
             <div className="col-md-7">
-              <h4>Залоговок</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere pariatur mollitia omnis veritatis beatae veniam tempore excepturi. Temporibus neque alias enim praesentium, fugit cupiditate. Eius qui nam quod eum, accusamus sit. Aspernatur quidem, ab ad quibusdam quia doloribus nisi rerum asperiores modi provident ullam commodi fugit ipsam autem, soluta accusamus.</p>
+              <h4>Хотите попасть в IT сферу?</h4>
+              <p>Хотите попасть в IT сферу, но не знаете с чего начать? Mentor.me, мы вам поможем. Только у нас вы сможете БЕСПЛАТНО пообщаться с профессионалами из сферы IT, получить те самые драгоценные знания которые вам так не хватает. Если же общение с ментором вызвало у вас чувство доверия, то вы без особых трудностей сможете встретиться в жизни и продолжить общение. Mentor.ME - учись с ментором или обучай других.</p>
             </div>
           </div>
         </section>
         <section>
           <div className="row">
             <div className="col-md-6">
-              <h5>Заголовок</h5>
-              <img src="" alt="9090" />
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum necessitatibus modi, dicta quas at architecto cumque reiciendis sit iure rem vel commodi neque ipsum voluptates et, placeat adipisci in aliquid.</p>
+              <h5>Плюсы для ментора</h5>
+              <img src="https://s3.envato.com/files/148761875/Hipsters-Megapack_Preview-4.jpg" alt="" />
+              <ul>
+                <li>Вклад в самого себя и в свои проекты, ведь когда вы обучаете других то обучаетесь и сами.</li>
+                <li>Вклад в свою страну</li>
+                <li>Увеличение своей репутации</li>
+              </ul>
             </div>
             <div className="col-md-6">
-              <h5>Заголовок</h5>
-              <img src="" alt="9090" />
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum necessitatibus modi, dicta quas at architecto cumque reiciendis sit iure rem vel commodi neque ipsum voluptates et, placeat adipisci in aliquid.</p>
+              <h5>Плюсы для учащегося:</h5>
+              <img src="/img/person-flat.png" alt="" />
+              <ul>
+                <li>Обучение абсолютно бессплатно</li>
+                <li>В качестве менторов выступают профессионалы с многолетним опытом работы</li>
+                <li>Возможность перенести общения из "Виртуального мира" в "Мир живых"</li>
+              </ul>
             </div>
           </div>
         </section>
         <section>
-          <img src="" alt="9090"/>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, doloremque blanditiis, eveniet libero et culpa fugit maxime provident praesentium ea consectetur distinctio dicta, inventore incidunt tempore, obcaecati nam voluptates? Tempora aliquam possimus aperiam officiis, facilis eaque pariatur assumenda necessitatibus incidunt?</p>
+          <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/5/000/21e/198/276f4ff.jpg" alt=""/>
+          <p>Mentor.me позвот достичь более широкого распостранения менторства, а также улучшения возможностей образования в целом</p>
         </section>
       </div>
     )

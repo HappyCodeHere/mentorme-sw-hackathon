@@ -8,16 +8,61 @@
     background-color: rgb(228, 219, 237);
 
     background-image: url('/img/rainbow.jpg');
+    // background-image: url('');
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   section {
     min-height: 300px;
-    padding: 20px 5%;
+    padding: 40px 5%;
+
+
+
+    img {
+      margin: 10px 0;
+      border-radius: 50%;
+      height: 150px;
+      width: 150px;
+    }
+
+    ul {
+      // list-style-type: none;
+      margin-top: 10px;
+      text-align: left;
+    }
+  }
+
+  section:nth-of-type(1) {
+    text-align: center;
+    img {
+      border-radius: 1%;
+      height: 200px;
+      width: 80%;
+    }
   }
 
   section:nth-of-type(2) {
     background-color: #cccccc;
+    text-align: center;
+
+    h5 {
+      font-weight: bold;
+    }
+  }
+
+  section:nth-of-type(3) {
+    // text-align: center;
+
+    p {
+      text-align: center;
+    }
+
+    img {
+      height: 200px;
+      width: 200px;
+      margin: 10px auto;
+      display: block;
+    }
   }
 }

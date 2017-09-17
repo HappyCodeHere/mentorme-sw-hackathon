@@ -19,7 +19,7 @@ const Header = ({ auth }) => {
 
       {auth.authenticated ?
         <div>
-          <span>Hello, {name}</span>
+          <span>Привет, {name}</span>
           <Link to="/search" activeClassName="active-link">Поиск</Link>
           <Link to="/chat" activeClassName="active-link">Сообщения</Link>
           <Link to="/profile" activeClassName="active-link">Профиль</Link>

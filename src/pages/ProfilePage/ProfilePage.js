@@ -22,8 +22,8 @@ class ProfilePage extends Component {
     super();
 
     this.state = {
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, accusamus!',
-      name: 'Василий',
+      description: '',
+      name: '',
 
       error: null,
     }
