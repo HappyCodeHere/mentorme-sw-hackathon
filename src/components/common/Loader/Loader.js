@@ -15,7 +15,7 @@ const Loader = () => {
         <div className="sk-child sk-dot2"></div>
       </div>
 
-      <div>Подожди немного...</div>
+      <div>Loading...</div>
     </div>
   )
 }

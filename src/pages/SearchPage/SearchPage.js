@@ -3,8 +3,13 @@ import React, { Component, PropTypes } from 'react';
 import Search from './parts/Search/Search';
 import MentorCardList from './parts/MentorCardList/MentorCardList';
 
-import Header2 from '../../components/Header2/Header2';
-import Footer from '../../components/Footer/Footer';
+// import Header2 from '../../components/Header2/Header2';
+// import Footer from '../../components/Footer/Footer';
+
+import { Loader } from '../../components/common';
+
+
+
 
 import './SearchPage.scss';
 
@@ -21,7 +26,8 @@ class SearchPage extends Component {
 
     this.state = {
       mentors: [],
-      search: ''
+      search: '',
+      firstTimeLoader: true,
     }
 
     this.getMentors = this.getMentors.bind(this);
@@ -35,7 +41,7 @@ class SearchPage extends Component {
   getMentors() {
     axios.get(`/mentors?search=${this.state.search}`)
       .then(data => {
-        this.setState({mentors: data.data})
+        this.setState({mentors: data.data, firstTimeLoader: false});
       })
       .catch(error => {
         console.log(error);
@@ -52,10 +58,17 @@ class SearchPage extends Component {
   render() {
     return (
       <div className="search-page">
-        <Header2 />
-        <Search search={this.state.search} handleData={this.handleSearch} />
-        <MentorCardList mentors={this.state.mentors} />
-        <Footer />
+        {this.state.firstTimeLoader ?
+        <Loader /> :
+        <div>
+          <Search search={this.state.search} handleData={this.handleSearch} />
+
+          {this.state.mentors.length === 0 ?
+          <p>Mentor not found:(</p> :
+          <MentorCardList mentors={this.state.mentors} />
+          }
+        </div>
+        }
       </div>
     )
   }

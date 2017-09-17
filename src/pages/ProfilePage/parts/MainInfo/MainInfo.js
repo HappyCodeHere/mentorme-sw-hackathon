@@ -12,8 +12,21 @@ const propTypes = {
 const MainInfo = ({ description, name, image, onChange }) => {
   return (
     <div className="main-info">
-      <textarea value={description} onChange={onChange} name="description"></textarea>
-      <input value={name} onChange={onChange} name="name"/>
+      <div>
+        <label htmlFor="">Name</label>
+        <input value={name} onChange={onChange} name="name"/>
+      </div>
+
+      <div>
+        <label htmlFor="">Description</label>
+        <textarea
+          value={description}
+          onChange={onChange}
+          name="description"
+          placeholder="What you can teach"
+        >
+        </textarea>
+      </div>
     </div>
   )
 }

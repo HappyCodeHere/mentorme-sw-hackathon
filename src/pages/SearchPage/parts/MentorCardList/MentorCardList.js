@@ -14,12 +14,14 @@ const MentorCardList = ({ mentors }) => {
     <div className="mentor-card-list">
 
       {mentors.map(item => {
-        const { id, name, image, description } = item;
+        const { _id:id, name, description } = item;
         return (
           <MentorCardItem
             key={id}
+
+            link={id}
             name={name}
-            image={image}
+            image="/img/person-flat.png"
             description={description}
           />
         )

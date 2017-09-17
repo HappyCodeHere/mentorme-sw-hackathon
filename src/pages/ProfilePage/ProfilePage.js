@@ -3,8 +3,8 @@ import React, { PropTypes, Component } from 'react';
 import Avatar from './parts/Avatar/Avatar';
 import MainInfo from './parts/MainInfo/MainInfo';
 
-import Header2 from '../../components/Header2/Header2';
-import Footer from '../../components/Footer/Footer';
+// import Header2 from '../../components/Header2/Header2';
+// import Footer from '../../components/Footer/Footer';
 
 import axios from 'axios';
 
@@ -54,16 +54,23 @@ class ProfilePage extends Component {
     console.log(this.state);
     return (
       <div className="profile-page">
-        <Header2 />
-        <Avatar />
-        <MainInfo description={this.state.description} name={this.state.name} onChange={this.handleElementsChange} />
-          страница профиля
 
+        <div className="container">
+          <div className="row">
+            <h3>Your profile</h3>
+            <div className="col-md-5">
+              <Avatar />
+            </div>
+            <div className="col-md-7">
+              <MainInfo description={this.state.description} name={this.state.name} onChange={this.handleElementsChange} />
+            </div>
+          </div>
 
           {this.state.error && <div className="error">{this.state.error}</div>}
 
-          <button onClick={this.handleButtonSaveClick}>Save Profile</button>
-        <Footer />
+          <button className="btn-reset" onClick={this.handleButtonSaveClick}>Save</button>
+        </div>
+
       </div>
     )
   }

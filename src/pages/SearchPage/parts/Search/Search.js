@@ -11,7 +11,12 @@ const propTypes = {
 const Search = ({ search, handleData }) => {
   return (
     <div className="search">
-      <input type="text" value={search} onChange={(event) => handleData(event.target.value)} />
+      <input
+        type="text"
+        value={search}
+        onChange={(event) => handleData(event.target.value)}
+        placeholder="Find mentor"
+        />
     </div>
   )
 }

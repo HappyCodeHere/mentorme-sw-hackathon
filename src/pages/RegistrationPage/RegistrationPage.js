@@ -1,14 +1,16 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
+// import Header from '../../components/Header/Header';
+// import Footer from '../../components/Footer/Footer';
 
 import { loginUser } from '../../actions/index';
 
+import Registration from './Registration/Registration';
+
 import { browserHistory } from 'react-router';
 
-import './RegistrationPage';
+import './RegistrationPage.css';
 
 
 const propTypes = {
@@ -28,7 +30,7 @@ class RegistrationPage extends Component {
   }
 
   handleSubmit() {
-    this.props.loginUser();
+    this.props.loginUser({ name: this.state.name });
     browserHistory.push('/search');
   }
 
@@ -40,25 +42,18 @@ class RegistrationPage extends Component {
   render() {
     return (
       <div className="registraion-page">
-        <Header auth={this.props.auth} />
-
-        <form>
-
-          <div>
-            <label htmlFor="">Name:</label>
-            <input type="text" value={this.state.name} onChange={this.handleElementsChange} name="name"/>
-          </div>
-
-          <div>
-            <label htmlFor="">Password:</label>
-            <input type="password" value={this.state.password} onChange={this.handleElementsChange} name="password"/>
-          </div>
-
-          <input type="submit" onClick={this.handleSubmit} value="Register" />
-        </form>
-
-
-        <Footer />
+        <header>
+          <Registration handleData={this.handleElementsChange} />
+        </header>
+        <section>
+          секция 1
+        </section>
+        <section>
+          секция 2
+        </section>
+        <section>
+          секция 3
+        </section>
       </div>
     )
   }
