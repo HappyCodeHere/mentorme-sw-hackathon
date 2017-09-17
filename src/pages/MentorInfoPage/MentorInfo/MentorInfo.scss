@@ -3,4 +3,21 @@
     width: 200px;
     height: 200px;
   }
+
+  .buttons {
+    text-align: center;
+  }
+
+  a {
+    background-color: #299fd1 !important;
+    display: inline-block;
+    margin: 10px;
+  }
+
+  button {
+    background-color: rgb(245, 48, 125);
+    display: inline-block;
+    margin: 10px;
+
+  }
 }

@@ -3,8 +3,8 @@ import React, { Component, PropTypes } from 'react';
 import Search from './parts/Search/Search';
 import MentorCardList from './parts/MentorCardList/MentorCardList';
 
-import Header2 from '../../components/Header2/Header2';
-import Footer from '../../components/Footer/Footer';
+// import Header2 from '../../components/Header2/Header2';
+// import Footer from '../../components/Footer/Footer';
 
 import { Loader } from '../../components/common';
 
@@ -58,7 +58,6 @@ class SearchPage extends Component {
   render() {
     return (
       <div className="search-page">
-        <Header2 />
         {this.state.firstTimeLoader ?
         <Loader /> :
         <div>
@@ -70,7 +69,6 @@ class SearchPage extends Component {
           }
         </div>
         }
-        <Footer />
       </div>
     )
   }

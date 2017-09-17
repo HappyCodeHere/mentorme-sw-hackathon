@@ -1,5 +1,7 @@
 import React, { PropTypes } from 'react';
 
+import { Link } from 'react-router';
+
 import './MentorInfo.css';
 
 
@@ -27,6 +29,12 @@ const MentorInfo = ({ name, description, image }) => {
               <label htmlFor="">Description</label>
               <p>{description}</p>
             </div>
+
+            <div className="buttons">
+              <Link to="/chat" className="btn-reset">Meet</Link>
+              <button className="btn-reset" onClick={() => alert('thanks!')}>Thanks</button>
+            </div>
+
           </div>
         </div>
       </div>

@@ -13,21 +13,21 @@ import ProfilePage from './pages/ProfilePage/ProfilePage';
 Redirect*/
 
 import App from './components/App';
+// <IndexRoute component={MainPage} />
 
 export default (
 	<Route path="/" component={App}>
 		<IndexRedirect from="/" to="registration" />
-		<IndexRoute component={MainPage} />
 
 		<Route path="/profile" component={ProfilePage} />
 		<Route path="/search" component={SearchPage} />
 
 		<Route path="/mentor/:id" component={MentorInfoPage} />
+		<Route path="/chat" component={ChatPage} />
 
 		<Route path="/registration" component={RegistrationPage} />
 
 	</Route>
 );
 
-// <Route path="/chat" component={ChatPage} />
 // <Route path="/login" component={LoginPage} />

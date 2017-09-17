@@ -11,8 +11,8 @@ import MentorInfo from './MentorInfo/MentorInfo';
 
 import './MentorInfoPage.css';
 
-import Header2 from '../../components/Header2/Header2';
-import Footer from '../../components/Footer/Footer';
+// import Header2 from '../../components/Header2/Header2';
+// import Footer from '../../components/Footer/Footer';
 
 
 
@@ -49,7 +49,6 @@ class MentorInfoPage extends Component {
   render() {
     return (
       <div className="mentor-info-page">
-        <Header2 />
         <h3>Mentor information</h3>
 
         {Object.keys(this.state.mentorInfo).length === 0 ?
@@ -63,7 +62,6 @@ class MentorInfoPage extends Component {
 
         <Link to="/search" className="btn-reset">Back</Link>
 
-      <Footer />
       </div>
     )
   }

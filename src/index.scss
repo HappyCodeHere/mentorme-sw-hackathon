@@ -20,6 +20,12 @@ body {
   padding: 10px 15px;
   margin: 10px auto;
 
+  &:focus,
+  &:active {
+    text-decoration: none;
+    color: #fff;
+  }
+
   &:hover {
     opacity: 0.8;
     color: #fff;

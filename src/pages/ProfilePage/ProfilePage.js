@@ -3,8 +3,8 @@ import React, { PropTypes, Component } from 'react';
 import Avatar from './parts/Avatar/Avatar';
 import MainInfo from './parts/MainInfo/MainInfo';
 
-import Header2 from '../../components/Header2/Header2';
-import Footer from '../../components/Footer/Footer';
+// import Header2 from '../../components/Header2/Header2';
+// import Footer from '../../components/Footer/Footer';
 
 import axios from 'axios';
 
@@ -54,7 +54,6 @@ class ProfilePage extends Component {
     console.log(this.state);
     return (
       <div className="profile-page">
-        <Header2 />
 
         <div className="container">
           <div className="row">
@@ -72,7 +71,6 @@ class ProfilePage extends Component {
           <button className="btn-reset" onClick={this.handleButtonSaveClick}>Save</button>
         </div>
 
-        <Footer />
       </div>
     )
   }
