@@ -1,14 +1,16 @@
 .chat {
-  background-image: url('/img/chat.png');
-  background-size: 100% 800px;
-  background-repeat: no-repeat;
-  height: 800px;
-  width: 100%;
+
+  // width: 100%;
+
+  div {
+    background-image: url('/img/chat2.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 800px;
+  }
 
   h3 {
-    position: absolute !important;
-    top: 15px;
-    left: 0;
-    right: 0;
+    margin-bottom: 0px;
   }
 }

@@ -1,9 +1,15 @@
 .registraion-page {
 
+
+
   header {
     padding-top: 50px;
-    min-height: 400px;
+    min-height: 500px;
     background-color: rgb(228, 219, 237);
+
+    background-image: url('/img/rainbow.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   section {
