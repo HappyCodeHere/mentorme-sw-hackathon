@@ -1,0 +1,27 @@
+.header2 {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: #24d07a;
+  min-height: 50px;
+  box-shadow: 0 2px 5px rgba(0,0,0,.26);
+
+  > div {
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 21px;
+      margin: 10px 10px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+
+    .active-link {
+      color: orange;
+    }
+  }
+}
