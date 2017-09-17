@@ -13,8 +13,9 @@ import * as types from './types';
   };
 }*/
 
-export const loginUser = () => {
+export const loginUser = (data) => {
   return {
     type: types.USER_LOGIN,
+    payload: data,
   }
 }

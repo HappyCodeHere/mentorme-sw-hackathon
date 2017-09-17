@@ -15,9 +15,12 @@ const MentorCardList = ({ mentors }) => {
 
       {mentors.map(item => {
         const { _id:id, name, description } = item;
+        const thanks = Math.floor(Math.random() * 6);
         return (
           <MentorCardItem
             key={id}
+
+            thanksCount={thanks}
 
             link={id}
             name={name}

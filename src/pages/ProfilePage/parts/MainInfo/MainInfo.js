@@ -13,17 +13,17 @@ const MainInfo = ({ description, name, image, onChange }) => {
   return (
     <div className="main-info">
       <div>
-        <label htmlFor="">Name</label>
-        <input value={name} onChange={onChange} name="name"/>
+        <label htmlFor="">Имя</label>
+        <input value={name} onChange={onChange} name="name" placeholder="Имя"/>
       </div>
 
       <div>
-        <label htmlFor="">Description</label>
+        <label htmlFor="">Описание</label>
         <textarea
           value={description}
           onChange={onChange}
           name="description"
-          placeholder="What you can teach"
+          placeholder="Чему можете научить"
         >
         </textarea>
       </div>

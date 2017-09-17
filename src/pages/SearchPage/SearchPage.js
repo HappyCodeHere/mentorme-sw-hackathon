@@ -58,6 +58,7 @@ class SearchPage extends Component {
   render() {
     return (
       <div className="search-page">
+        <h3>Менторы</h3>
         {this.state.firstTimeLoader ?
         <Loader /> :
         <div>

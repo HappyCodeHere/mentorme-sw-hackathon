@@ -38,7 +38,7 @@ class Registration extends Component {
         </div>
 
         <div>
-          <input type="password" value={this.state.password} onChange={this.handleElementsChange} name="password" placeholder="*******"/>
+          <input type="password" value={this.state.password} onChange={this.handleElementsChange} name="password" placeholder="Пароль" />
         </div>
 
         <input type="submit" onClick={this.handleSubmit} value="Войти" className="btn-reset" />

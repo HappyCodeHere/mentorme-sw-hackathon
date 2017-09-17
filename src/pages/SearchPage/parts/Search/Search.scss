@@ -1,5 +1,12 @@
 .search {
   display: block;
-  margin: 10px auto;
+  margin: 50px auto;
   width: 400px;
+
+  input {
+    background-image: url('/img/search.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 25px;
+  }
 }

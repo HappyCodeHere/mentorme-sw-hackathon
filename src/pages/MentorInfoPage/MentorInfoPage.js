@@ -31,6 +31,7 @@ class MentorInfoPage extends Component {
   }
 
   componentWillMount() {
+    window.scrollTo(0, 0);
     this.getMentorInfo(this.props.params.id);
   }
 
@@ -38,7 +39,8 @@ class MentorInfoPage extends Component {
     axios.get(`/mentor?id=${id}`)
       .then(data => {
         setTimeout(() => {
-          this.setState({mentorInfo: data.data[0]})
+          this.setState({mentorInfo: data.data[0]});
+          window.scrollTo(0, 0);
         }, 350);
       })
       .catch(error => {
@@ -49,18 +51,20 @@ class MentorInfoPage extends Component {
   render() {
     return (
       <div className="mentor-info-page">
-        <h3>Mentor information</h3>
+        <h3>Информация о менторе</h3>
 
         {Object.keys(this.state.mentorInfo).length === 0 ?
           <Loader /> :
           <MentorInfo
             name={this.state.mentorInfo.name}
             description={this.state.mentorInfo.description}
+            thanksCount={Math.floor(Math.random() * 6)}
+            link={this.state.mentorInfo._id}
             image="/img/person-flat.png"
           />
         }
 
-        <Link to="/search" className="btn-reset">Back</Link>
+        <Link to="/search" className="btn-reset">Назад</Link>
 
       </div>
     )

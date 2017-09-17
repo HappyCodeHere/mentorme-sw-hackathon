@@ -57,9 +57,10 @@ class ProfilePage extends Component {
 
         <div className="container">
           <div className="row">
-            <h3>Your profile</h3>
+            <h3>Профиль</h3>
             <div className="col-md-5">
               <Avatar />
+              <p>Вас поблагодарили: {Math.floor(Math.random() * 6)}</p>
             </div>
             <div className="col-md-7">
               <MainInfo description={this.state.description} name={this.state.name} onChange={this.handleElementsChange} />
@@ -68,7 +69,7 @@ class ProfilePage extends Component {
 
           {this.state.error && <div className="error">{this.state.error}</div>}
 
-          <button className="btn-reset" onClick={this.handleButtonSaveClick}>Save</button>
+          <button className="btn-reset" onClick={this.handleButtonSaveClick}>Сохранить</button>
         </div>
 
       </div>

@@ -10,14 +10,16 @@ const propTypes = {
   description: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
+  thanksCount: PropTypes.number.isRequired,
 }
 
-const MentorCardItem = ({ name, description, image, link }) => {
+const MentorCardItem = ({ name, description, image, link, thanksCount }) => {
   return (
     <div className="mentor-card-item">
       <div className="row">
         <div className="col-md-5">
           <img src={image} alt="" />
+          <p>Поблагодарили: {thanksCount}</p>
         </div>
         <div className="col-md-7">
           <div>

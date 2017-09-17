@@ -15,7 +15,7 @@ const Search = ({ search, handleData }) => {
         type="text"
         value={search}
         onChange={(event) => handleData(event.target.value)}
-        placeholder="Find mentor"
+        placeholder="Поиск..."
         />
     </div>
   )
