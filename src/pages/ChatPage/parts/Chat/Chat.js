@@ -10,8 +10,7 @@ const propTypes = {
 const Chat = () => {
   return (
     <div className="chat">
-      chat here
-      
+      <h3>Сообщения</h3>
     </div>
   )
 }
