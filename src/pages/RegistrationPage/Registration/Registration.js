@@ -4,7 +4,7 @@ import './Registration.css';
 
 
 const propTypes = {
-
+  handleSubmit: PropTypes.func.isRequired,
 }
 
 class Registration extends Component {
@@ -12,24 +12,36 @@ class Registration extends Component {
     super();
 
     this.state = {
-
+      name: '',
+      password: '',
     }
+
+    this.handleElementsChange = this.handleElementsChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit() {
+    const { name, password } = this.state;
+    this.props.handleSubmit({name, password });
+  }
+
+  handleElementsChange(event) {
+    const { name, value } = event.target;
+    this.setState({[name]: value});
   }
 
   render() {
     return (
       <form className="registration">
         <div>
-          <label htmlFor="">Name:</label>
-          <input type="text" value={this.state.name} onChange={this.handleElementsChange} name="name"/>
+          <input type="text" value={this.state.name} onChange={this.handleElementsChange} name="name" placeholder="Имя" />
         </div>
 
         <div>
-          <label htmlFor="">Password:</label>
-          <input type="password" value={this.state.password} onChange={this.handleElementsChange} name="password"/>
+          <input type="password" value={this.state.password} onChange={this.handleElementsChange} name="password" placeholder="*******"/>
         </div>
 
-        <input type="submit" onClick={this.handleSubmit} value="Register" />
+        <input type="submit" onClick={this.handleSubmit} value="Войти" className="btn-reset" />
       </form>
     )
   }

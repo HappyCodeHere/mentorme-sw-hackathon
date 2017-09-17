@@ -8,11 +8,31 @@
   background-color: #27272e;
   color: #fff;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 20px 70px;
+  padding-bottom: 10px;
 
-  span {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    ul:last-of-type {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        text-align: left;
+        margin: 5px 0;
+      }
+    }
+  }
+
+  > p span {
     color: #ff084a;
     cursor: pointer;
 

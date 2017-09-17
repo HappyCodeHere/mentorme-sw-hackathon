@@ -26,24 +26,23 @@ class RegistrationPage extends Component {
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleElementsChange = this.handleElementsChange.bind(this);
   }
 
-  handleSubmit() {
-    this.props.loginUser({ name: this.state.name });
+  handleSubmit({name, password}) {
+    console.log(name, password);
+    this.props.loginUser({ name: name });
     browserHistory.push('/search');
   }
 
-  handleElementsChange(event) {
-    const { name, value } = event.target;
-    this.setState({[name]: value});
-  }
+
 
   render() {
     return (
       <div className="registraion-page">
         <header>
-          <Registration handleData={this.handleElementsChange} />
+          <Registration
+            handleSubmit={this.handleSubmit}
+          />
         </header>
         <section>
           секция 1

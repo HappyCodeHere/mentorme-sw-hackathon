@@ -15,7 +15,9 @@ class App extends Component {
     return (
       <div className="app">
         <Header auth={this.props.auth} />
-        {this.props.children}
+        <div className="main">
+          {this.props.children}
+        </div>
         <Footer />
       </div>
     );
