@@ -19,7 +19,7 @@ class Avatar extends Component {
   render() {
     return (
       <div className="avatar">
-        аватар тут
+        <img src="/img/person-flat.png" alt="" />
       </div>
     )
   }

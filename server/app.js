@@ -26,24 +26,36 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/../build');
   });
 
-  app.get('/mentors', (req, res) => {
+app.get('/mentors', (req, res) => {
 
-    const { search } = req.query;
-    console.log(search);
+  const { search } = req.query;
+  console.log(search);
 
 
 
-    Mentor.find({})
-      .then(mentors => {
+  Mentor.find({})
+    .then(mentors => {
 
-        let items = mentors.filter(item => {
-              let item2 = item.description.toLowerCase();
-              return item2.indexOf(search.toLowerCase()) !=-1;
-            })
+      let items = mentors.filter(item => {
+            let item2 = item.description.toLowerCase();
+            return item2.indexOf(search.toLowerCase()) !=-1;
+          })
 
-        res.json(items);
-      });
-  })
+      res.json(items);
+    });
+  });
+
+app.get('/mentor', (req, res) => {
+
+  const { id } = req.query;
+  console.log(id);
+
+
+  Mentor.find({ _id: id })
+    .then(mentor => {
+      res.json(mentor);
+    });
+  });
 
   app.post('/mentors', (req, res) => {
 

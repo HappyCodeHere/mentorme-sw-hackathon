@@ -55,14 +55,23 @@ class ProfilePage extends Component {
     return (
       <div className="profile-page">
         <Header2 />
-        <Avatar />
-        <MainInfo description={this.state.description} name={this.state.name} onChange={this.handleElementsChange} />
-          страница профиля
 
+        <div className="container">
+          <div className="row">
+            <h3>Your profile</h3>
+            <div className="col-md-5">
+              <Avatar />
+            </div>
+            <div className="col-md-7">
+              <MainInfo description={this.state.description} name={this.state.name} onChange={this.handleElementsChange} />
+            </div>
+          </div>
 
           {this.state.error && <div className="error">{this.state.error}</div>}
 
-          <button onClick={this.handleButtonSaveClick}>Save Profile</button>
+          <button className="btn-reset" onClick={this.handleButtonSaveClick}>Save</button>
+        </div>
+
         <Footer />
       </div>
     )
