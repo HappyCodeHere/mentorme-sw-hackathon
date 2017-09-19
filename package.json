@@ -1,5 +1,5 @@
 {
-  "name": "my-react-starter-pack",
+  "name": "mentorme-sw-hackathon",
   "version": "0.1.0",
   "proxy": "http://localhost:3090",
   "private": true,
